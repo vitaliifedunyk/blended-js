@@ -142,25 +142,35 @@
 // Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
 // і поверніть її з функції.
 
-function getNumbers(min, max) {
-  let count = 0;
-  for (let i = max; i >= min; i--) {
-    console.log(i);
-    if (i % 2 === 0) {
-      count += i;
-    }
-  }
+// function getNumbers(min, max) {
+//   let count = 0;
+//   for (let i = max; i >= min; i--) {
+//     console.log(i);
+//     if (i % 2 === 0) {
+//       count += i;
+//     }
+//   }
 
-  return count;
-}
+//   return count;
+// }
 
-console.log(getNumbers(6, 8));
-console.log(getNumbers(6, 12));
+// console.log(getNumbers(6, 8));
+// console.log(getNumbers(6, 12));
 
 //!========================================================================
 // Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
 // Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
 // повертати з функції рядок - 'Not a number!'.
+
+function min(a, b) {
+  let isNumber = typeof a !== "number" || typeof b !== "number";
+  if (isNumber) {
+    return `Not a number!`;
+  }
+  return a > b ? b : a;
+}
+
+console.log(min(6, 5));
 
 //!========================================================================
 // Змінна num може набувати 4 значення: '1', '2', '3' або '4'
