@@ -103,6 +103,29 @@
 // то вивести в alert рядок "Добрий день!",
 // в іншому випадку вивести в alert рядок "Невірний пароль!"
 
+let userName = prompt("Введіть логін");
+
+console.log(userName);
+let userAdmin = "Адмін";
+let adminPass = "Я головний";
+let checkUserName = userName === null || userName === "";
+
+let password;
+if (userName === userAdmin) {
+  password = prompt("Введіть пароль");
+  console.log(password);
+
+  if (password === adminPass) {
+    alert("Добрий день!");
+  } else {
+    alert("Невірний пароль!");
+  }
+} else if (checkUserName) {
+  alert("Скасовано");
+} else {
+  alert("Я вас не знаю");
+}
+
 //!========================================================================
 // Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
 
