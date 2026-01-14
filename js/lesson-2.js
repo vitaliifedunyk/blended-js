@@ -32,21 +32,50 @@
 // Якщо ім'я є в масиві – виводить повідомлення через alert: "Welcome, <name>!"
 // Якщо ім'я відсутнє – виводить повідомлення: "User not found".
 
-const logins = ["Peter", "John", "Igor", "Sasha"];
+// const logins = ["Peter", "John", "Igor", "Sasha"];
 
-function checkLogin(array) {
-  let userName = prompt("Введіть імʼя");
-  if (array.includes(userName)) {
-    return alert(`Welcome, ${userName}!`);
-  }
-  return alert(`User not found`);
-}
-checkLogin(logins);
+// function checkLogin(array) {
+//   let userName = prompt("Введіть імʼя");
+//   if (array.includes(userName)) {
+//     return alert(`Welcome, ${userName}!`);
+//   }
+//   return alert(`User not found`);
+// }
+// checkLogin(logins);
 //!========================================================================
 // Напишіть функцію caclculateAverage(),
 // яка приймає довільну кількість
 // аргументів і повертає їхнє середнє значення.
 // Додайте перевірку, що аргументи - це числа.
+
+// function calculateAverage(...args) {
+//   for (let arg of args) {
+//     if (typeof arg !== "number") {
+//       return "Error: All arguments must be numbers";
+//     }
+//   }
+
+//   let sum = 0;
+//   for (let arg of args) {
+//     sum += arg;
+//   }
+
+//   return sum / args.length;
+// }
+
+function calculateAverage(...args) {
+  if (!args.every((arg) => typeof arg === "number")) {
+    return "Error: All arguments must be numbers";
+  }
+  const sum = args.reduce((acc, num) => (acc += num), 0);
+  return sum / args.length;
+}
+
+console.log(calculateAverage(10, 14, 15)); // 13
+console.log(calculateAverage(5, 10, 15, 20)); // 12.5
+console.log(calculateAverage(100)); // 100
+console.log(calculateAverage(10, "test", 15)); // Error або false
+console.log(calculateAverage()); // NaN або Error
 //!========================================================================
 // Напишіть функцію, яка сумуватиме сусідні числа
 // і пушитиме їх в новий масив.
