@@ -8,21 +8,21 @@
 // Використайте цикл for для перебору елементів масиву.
 // Нумерація елементів повинна починатися з 1 (а не з 0).
 
-const styles = ["jazz", "blues"];
-styles.push("rock-n-roll");
-console.log(styles);
-console.log(styles.indexOf("blues"));
-styles[1] = "classic";
-console.log(styles);
+// const styles = ["jazz", "blues"];
+// styles.push("rock-n-roll");
+// console.log(styles);
+// console.log(styles.indexOf("blues"));
+// styles[1] = "classic";
+// console.log(styles);
 
-function logItems(array, startFrom = 1) {
-  let count = startFrom;
-  for (const item of array) {
-    console.log(`${count} - ${item}`);
-    count++;
-  }
-}
-logItems(styles);
+// function logItems(array, startFrom = 1) {
+//   let count = startFrom;
+//   for (const item of array) {
+//     console.log(`${count} - ${item}`);
+//     count++;
+//   }
+// }
+// logItems(styles);
 
 //!========================================================================
 // Напишіть функцію checkLogin(array), яка:
@@ -32,7 +32,16 @@ logItems(styles);
 // Якщо ім'я є в масиві – виводить повідомлення через alert: "Welcome, <name>!"
 // Якщо ім'я відсутнє – виводить повідомлення: "User not found".
 
-// const logins = ["Peter", "John", "Igor", "Sasha"];
+const logins = ["Peter", "John", "Igor", "Sasha"];
+
+function checkLogin(array) {
+  let userName = prompt("Введіть імʼя");
+  if (array.includes(userName)) {
+    return alert(`Welcome, ${userName}!`);
+  }
+  return alert(`User not found`);
+}
+checkLogin(logins);
 //!========================================================================
 // Напишіть функцію caclculateAverage(),
 // яка приймає довільну кількість
