@@ -63,28 +63,52 @@
 //   return sum / args.length;
 // }
 
-function calculateAverage(...args) {
-  if (!args.every((arg) => typeof arg === "number")) {
-    return "Error: All arguments must be numbers";
-  }
-  const sum = args.reduce((acc, num) => (acc += num), 0);
-  return sum / args.length;
-}
+// function calculateAverage(...args) {
+//   if (!args.every((arg) => typeof arg === "number")) {
+//     return "Error: All arguments must be numbers";
+//   }
+//   const sum = args.reduce((acc, num) => (acc += num), 0);
+//   return sum / args.length;
+// }
 
-console.log(calculateAverage(10, 14, 15)); // 13
-console.log(calculateAverage(5, 10, 15, 20)); // 12.5
-console.log(calculateAverage(100)); // 100
-console.log(calculateAverage(10, "test", 15)); // Error або false
-console.log(calculateAverage()); // NaN або Error
+// console.log(calculateAverage(10, 14, 15)); // 13
+// console.log(calculateAverage(5, 10, 15, 20)); // 12.5
+// console.log(calculateAverage(100)); // 100
+// console.log(calculateAverage(10, "test", 15)); // Error або false
+// console.log(calculateAverage()); // NaN або Error
 //!========================================================================
 // Напишіть функцію, яка сумуватиме сусідні числа
 // і пушитиме їх в новий масив.
 
 // const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+// console.log(someArr);
 
 // уточнення: складати необхідно перше число з другим, потім друге - з третім,
 // третє - з четвертим і так до кінця.
 // В результаті функція має повертати масив [33, 45, 39, 17, 25, 27, 29].
+
+function calculateTotal(someArr) {
+  const newArray = [];
+  for (let i = 0; i < someArr.length - 1; i++) {
+    const sum = (someArr[i] += someArr[i + 1]);
+    // console.log(i);
+    // console.log(sum);
+    newArray.push(sum);
+  }
+  return newArray;
+}
+const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+const result = calculateTotal(someArr);
+console.log(result);
+// [33, 45, 39, 17, 25, 27, 29] ✅
+
+console.log(calculateTotal([1, 2, 3])); // [3, 5]
+console.log(calculateTotal([10, 20])); // [30]
+console.log(calculateTotal([5])); // []
+console.log(calculateTotal([1, 1, 1, 1, 1])); // [2, 2, 2, 2]
+
+calculateTotal(someArr);
+
 //!========================================================================
 // Напишіть функцію findSmallestNumber(numbers),
 // яка шукає найменше число в масиві.
