@@ -87,27 +87,27 @@
 // третє - з четвертим і так до кінця.
 // В результаті функція має повертати масив [33, 45, 39, 17, 25, 27, 29].
 
-function calculateTotal(someArr) {
-  const newArray = [];
-  for (let i = 0; i < someArr.length - 1; i++) {
-    const sum = (someArr[i] += someArr[i + 1]);
-    // console.log(i);
-    // console.log(sum);
-    newArray.push(sum);
-  }
-  return newArray;
-}
-const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
-const result = calculateTotal(someArr);
-console.log(result);
+// function calculateTotal(someArr) {
+//   const newArray = [];
+//   for (let i = 0; i < someArr.length - 1; i++) {
+//     const sum = (someArr[i] += someArr[i + 1]);
+// console.log(i);
+// console.log(sum);
+//     newArray.push(sum);
+//   }
+//   return newArray;
+// }
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+// const result = calculateTotal(someArr);
+// console.log(result);
 // [33, 45, 39, 17, 25, 27, 29] ✅
 
-console.log(calculateTotal([1, 2, 3])); // [3, 5]
-console.log(calculateTotal([10, 20])); // [30]
-console.log(calculateTotal([5])); // []
-console.log(calculateTotal([1, 1, 1, 1, 1])); // [2, 2, 2, 2]
+// console.log(calculateTotal([1, 2, 3])); // [3, 5]
+// console.log(calculateTotal([10, 20])); // [30]
+// console.log(calculateTotal([5])); // []
+// console.log(calculateTotal([1, 1, 1, 1, 1])); // [2, 2, 2, 2]
 
-calculateTotal(someArr);
+// calculateTotal(someArr);
 
 //!========================================================================
 // Напишіть функцію findSmallestNumber(numbers),
@@ -117,6 +117,45 @@ calculateTotal(someArr);
 // в іншому випадку - поверніть 'Sory, it is not an array!'.
 
 // const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
+
+function findSmallestNumber(numbers) {
+  let minNum = Array.isArray(numbers)
+    ? Math.min(...numbers)
+    : `Sory, it is not an array!`;
+  return minNum;
+}
+
+const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
+// Тест 1: Нормальний масив
+console.log(findSmallestNumber([2, 5, 35, 56, 12, 24, 7, 80, 3]));
+// 2 ✅
+
+// Тест 2: Масив з від'ємними числами
+console.log(findSmallestNumber([10, -5, 0, 15, -20]));
+// -20 ✅
+
+// Тест 3: Масив з одним елементом
+console.log(findSmallestNumber([42]));
+// 42 ✅
+
+// Тест 4: Не масив - рядок
+console.log(findSmallestNumber("hello"));
+// "Sorry, it is not an array!" ✅
+
+// Тест 5: Не масив - число
+console.log(findSmallestNumber(123));
+// "Sorry, it is not an array!" ✅
+
+// Тест 6: Не масив - об'єкт
+console.log(findSmallestNumber({ a: 1 }));
+// "Sorry, it is not an array!" ✅
+
+// Тест 7: Порожній масив
+console.log(findSmallestNumber([]));
+// Infinity ⚠️ (особливість Math.min)
+
+const result = findSmallestNumber(numbers);
+console.log(result);
 //!========================================================================
 // Напишіть функцію findLongestWord(string), яка
 // приймає довільний рядок, що складається лише зі слів, розділених
