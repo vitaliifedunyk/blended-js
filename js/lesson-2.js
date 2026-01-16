@@ -118,44 +118,17 @@
 
 // const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 
-function findSmallestNumber(numbers) {
-  let minNum = Array.isArray(numbers)
-    ? Math.min(...numbers)
-    : `Sory, it is not an array!`;
-  return minNum;
-}
+// function findSmallestNumber(numbers) {
+//   let minNum = Array.isArray(numbers)
+//     ? Math.min(...numbers)
+//     : `Sory, it is not an array!`;
+//   return minNum;
+// }
 
-const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
-// Тест 1: Нормальний масив
-console.log(findSmallestNumber([2, 5, 35, 56, 12, 24, 7, 80, 3]));
-// 2 ✅
+// const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 
-// Тест 2: Масив з від'ємними числами
-console.log(findSmallestNumber([10, -5, 0, 15, -20]));
-// -20 ✅
-
-// Тест 3: Масив з одним елементом
-console.log(findSmallestNumber([42]));
-// 42 ✅
-
-// Тест 4: Не масив - рядок
-console.log(findSmallestNumber("hello"));
-// "Sorry, it is not an array!" ✅
-
-// Тест 5: Не масив - число
-console.log(findSmallestNumber(123));
-// "Sorry, it is not an array!" ✅
-
-// Тест 6: Не масив - об'єкт
-console.log(findSmallestNumber({ a: 1 }));
-// "Sorry, it is not an array!" ✅
-
-// Тест 7: Порожній масив
-console.log(findSmallestNumber([]));
-// Infinity ⚠️ (особливість Math.min)
-
-const result = findSmallestNumber(numbers);
-console.log(result);
+// const result = findSmallestNumber(numbers);
+// console.log(result);
 //!========================================================================
 // Напишіть функцію findLongestWord(string), яка
 // приймає довільний рядок, що складається лише зі слів, розділених
@@ -163,6 +136,20 @@ console.log(result);
 
 // Скористайтесь цим прикладом виклику функції для перевірки її роботи:
 // console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
+
+function findLongestWord(string) {
+  let word = string.split(" ");
+  // console.log(word);
+  let long = "";
+
+  for (let i = 0; i < word.length; i++) {
+    if (long.length < word[i].length) {
+      long = word[i];
+    }
+  }
+  return long;
+}
+console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
 //!========================================================================
 // Напишіть скрипт, який для об'єкту user, послідовно:
 // 1 - додасть поле mood зі значенням 'happy',
