@@ -137,19 +137,19 @@
 // Скористайтесь цим прикладом виклику функції для перевірки її роботи:
 // console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
 
-function findLongestWord(string) {
-  let word = string.split(" ");
-  // console.log(word);
-  let long = "";
+// function findLongestWord(string) {
+//   let word = string.split(" ");
+//   // console.log(word);
+//   let long = "";
 
-  for (let i = 0; i < word.length; i++) {
-    if (long.length < word[i].length) {
-      long = word[i];
-    }
-  }
-  return long;
-}
-console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
+//   for (let i = 0; i < word.length; i++) {
+//     if (long.length < word[i].length) {
+//       long = word[i];
+//     }
+//   }
+//   return long;
+// }
+// console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
 //!========================================================================
 // Напишіть скрипт, який для об'єкту user, послідовно:
 // 1 - додасть поле mood зі значенням 'happy',
@@ -158,12 +158,22 @@ console.log(findLongestWord("London is the capital of Great Britain")); // 'capi
 // 4 - виведе зміст об'єкта user у форматі
 // '<ключ>:<значення>' використовуя Object.keys() та for...of
 
-// const user = {
-//     name: "John",
-//     age: 20,
-//     hobby: "tenis",
-//     premium: true,
-//   };
+const user = {
+  name: "John",
+  age: 20,
+  hobby: "tenis",
+  premium: true,
+};
+
+user.mood = 'happy';
+user.hobby = 'skydiving';
+user.premium = false;
+
+const keys = Object.keys(user);
+
+for (const key of keys) {
+  console.log(`${key}:${user[key]}`);
+}
 //!========================================================================
 // Є об'єкт, в якому зберігаються зарплати команди
 // Напишіть код для додавання усіх зарплат та
