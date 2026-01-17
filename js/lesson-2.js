@@ -180,21 +180,21 @@
 // збережіть його результат в змінній sum.
 // Якщо об'єкт salaries пустий, то результат має бути 0
 
-const salaries = {
-  Mango: 100,
-  Poly: 160,
-  Ajax: 1470,
-};
+// const salaries = {
+//   Mango: 100,
+//   Poly: 160,
+//   Ajax: 1470,
+// };
 
-let sum = 0;
+// let sum = 0;
 
-const salaryValues = Object.values(salaries);
+// const salaryValues = Object.values(salaries);
 
-for (const value of salaryValues) {
-  sum += value;
-}
+// for (const value of salaryValues) {
+//   sum += value;
+// }
 
-console.log(sum);
+// console.log(sum);
 
 //!========================================================================
 // Створіть об'єкт calculator з наступними методами:
@@ -205,6 +205,46 @@ console.log(sum);
 
 // Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
 // методи sum і mult мають повертати рядок 'No such propeties'
+
+// const calculator = {
+//   read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   },
+//   exist() {
+//     return this.a !== undefined && this.b !== undefined;
+//   },
+//   sum() {
+//     if (!this.exist()) {
+//       return `No such propeties`
+//     }
+//     return this.a += this.b
+//   },
+//   mult() {
+//     if (!this.exist()) {
+//       return `No such propeties`
+//     }
+//     return this.a *= this.b
+//   }
+// }
+
+// // Тест 1: Без read() - властивостей немає
+// console.log(calculator.exist());  // false
+// console.log(calculator.sum());    // "No such properties"
+// console.log(calculator.mult());   // "No such properties"
+
+// // Тест 2: Після read() - властивості є
+// calculator.read(5, 10);
+
+// console.log(calculator.exist());  // true
+// console.log(calculator.sum());    // 15 (5 + 10)
+// console.log(calculator.mult());   // 50 (5 * 10)
+
+// // Тест 3: Зміна значень
+// calculator.read(3, 7);
+
+// console.log(calculator.sum());    // 10 (3 + 7)
+// console.log(calculator.mult());   // 21 (3 * 7)
 //!========================================================================
 // Напишіть функцію calcTotalPrice(fruits, fruitName),
 // яка приймає массив об'єктів (fruits) і рядок з назвою фрукта (fruitName).
