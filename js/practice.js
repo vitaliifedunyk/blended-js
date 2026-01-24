@@ -789,18 +789,24 @@
 
 // //!========================================================================
 
-// // Завдання 4: Оновлення статусу онлайн
-// // Напишіть функцію setOnlineStatus(users, namesArray), яка:
-// // Приймає масив всіх користувачів та масив імен тих, хто зайшов у мережу.
-// // Для кожного користувача, чиє ім'я є в namesArray, змініть status на 'online'.
-// // Іншим залиште або встановіть 'offline'. Поверніть змінений масив.
+// Завдання 4: Оновлення статусу онлайн
+// Напишіть функцію setOnlineStatus(users, namesArray), яка:
+// Приймає масив всіх користувачів та масив імен тих, хто зайшов у мережу.
+// Для кожного користувача, чиє ім'я є в namesArray, змініть status на 'online'.
+// Іншим залиште або встановіть 'offline'. Поверніть змінений масив.
 
-// const allUsers = [
-//     { name: "Ivan", status: "offline" },
-//     { name: "Maria", status: "offline" },
-//     { name: "Petro", status: "offline" },
-// ];
-// const onlineNames = ["Maria", "Petro"];
+function setOnlineStatus(users, namesArray) {
+
+}
+
+const allUsers = [
+    { name: "Ivan", status: "offline" },
+    { name: "Maria", status: "offline" },
+    { name: "Petro", status: "offline" },
+];
+const onlineNames = ["Maria", "Petro"];
+console.log(setOnlineStatus(allUsers, onlineNames));
+
 
 // //!========================================================================
 
