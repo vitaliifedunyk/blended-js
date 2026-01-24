@@ -795,17 +795,30 @@
 // Для кожного користувача, чиє ім'я є в namesArray, змініть status на 'online'.
 // Іншим залиште або встановіть 'offline'. Поверніть змінений масив.
 
-function setOnlineStatus(users, namesArray) {
+// function setOnlineStatus(users, namesArray) {
+//     const newArr = users.map(user => ({ ...user }))
+//     for (const user of newArr) {
+//         if (namesArray.includes(user.name)) {
+//             user.status = 'online'
+// console.log(user.name);
+//         } else {
+//             user.status = 'offline'
+//         }
 
-}
+//     }
+//     return newArr
 
-const allUsers = [
-    { name: "Ivan", status: "offline" },
-    { name: "Maria", status: "offline" },
-    { name: "Petro", status: "offline" },
-];
-const onlineNames = ["Maria", "Petro"];
-console.log(setOnlineStatus(allUsers, onlineNames));
+// }
+
+// const allUsers = [
+//     { name: "Ivan", status: "online" },
+//     { name: "Maria", status: "offline" },
+//     { name: "Petro", status: "offline" },
+//     { name: "Vitalii", status: "online" },
+//     { name: "Ninok", status: "online" },
+// ];
+// const onlineNames = ["Maria", "Petro"];
+// console.log(setOnlineStatus(allUsers, onlineNames));
 
 
 // //!========================================================================
