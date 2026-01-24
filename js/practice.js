@@ -739,30 +739,53 @@
 // console.log(getCartTotal(cart));
 //!========================================================================
 
-// // Завдання 2: Пошук користувача за email
-// // Напишіть функцію findUserByEmail(users, email), яка:
-// // Приймає масив об'єктів користувачів та рядок з email.
-// // Повертає об'єкт користувача, якщо email збігається.
-// // Якщо користувача не знайдено — повертає рядок 'User not found'.
+// Завдання 2: Пошук користувача за email
+// Напишіть функцію findUserByEmail(users, email), яка:
+// Приймає масив об'єктів користувачів та рядок з email.
+// Повертає об'єкт користувача, якщо email збігається.
+// Якщо користувача не знайдено — повертає рядок 'User not found'.
+
+// function findUserByEmail(users, email) {
+//     for (const user of users) {
+//         if (user.email === email) {
+//             return user
+//         }
+//     }
+//     return `User not found`
+// }
 
 // const users = [
 //     { id: 1, name: "Oleg", email: "oleg@gmail.com" },
 //     { id: 2, name: "Anna", email: "ann.smart@ukr.net" },
 //     { id: 3, name: "Igor", email: "igor_dev@outlook.com" },
 // ];
+// console.log(findUserByEmail(users, 'ann.smart@ukr.net'));
 
 // //!========================================================================
 
-// // Завдання 3: Фільтрація за ціною
-// // Напишіть функцію filterProductsByPrice(products, minPrice), яка:
-// // Приймає масив товарів і мінімальну ціну.
-// // Повертає новий масив товарів, ціна яких більша або дорівнює minPrice.
+// Завдання 3: Фільтрація за ціною
+// Напишіть функцію filterProductsByPrice(products, minPrice), яка:
+// Приймає масив товарів і мінімальну ціну.
+// Повертає новий масив товарів, ціна яких більша або дорівнює minPrice.
+
+// function filterProductsByPrice(products, minPrice) {
+//     const newArr = [];
+//     for (const product of products) {
+//         if (product.price >= minPrice) {
+//             newArr.push(product)
+//         }
+//     }
+//     return newArr
+// }
 
 // const electronics = [
 //     { name: "Phone", price: 8000 },
 //     { name: "Tablet", price: 12000 },
 //     { name: "Watch", price: 3000 },
 // ];
+
+// console.log(filterProductsByPrice(electronics, 9000));
+
 
 // //!========================================================================
 

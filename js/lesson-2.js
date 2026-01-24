@@ -10,21 +10,27 @@
 
 // const styles = ["jazz", "blues"];
 // styles.push("rock-n-roll");
-// console.log(styles);
-// console.log(styles.indexOf("blues"));
-// styles[1] = "classic";
-// console.log(styles);
+// // console.log(styles);
+// let index = styles.indexOf("blues")
 
-// function logItems(array, startFrom = 1) {
-//   let count = startFrom;
-//   for (const item of array) {
-//     console.log(`${count} - ${item}`);
-//     count++;
-//   }
+// if (index !== -1) {
+//     // styles[index] = 'classic';
+//     styles.splice(index, 1, 'classic')
+//     console.log(styles);
+
+// }
+
+// function logItems(array) {
+//     let count = 1;
+//     for (const item of array) {
+//         console.log(`${count} - ${item}`);
+//         count++;
+//     }
 // }
 // logItems(styles);
 
 //!========================================================================
+
 // Напишіть функцію checkLogin(array), яка:
 // Приймає масив логінів як аргумент.
 // Запитує ім'я користувача через prompt.
@@ -35,14 +41,17 @@
 // const logins = ["Peter", "John", "Igor", "Sasha"];
 
 // function checkLogin(array) {
-//   let userName = prompt("Введіть імʼя");
-//   if (array.includes(userName)) {
-//     return alert(`Welcome, ${userName}!`);
-//   }
-//   return alert(`User not found`);
+//     let userName = prompt("Введіть імʼя");
+//     if (array.includes(userName)) {
+//         return alert(`Welcome, ${userName}!`);
+//     }
+//     return alert(`User not found`);
 // }
-// checkLogin(logins);
+// console.log(checkLogin(logins));
+// ;
+
 //!========================================================================
+
 // Напишіть функцію caclculateAverage(),
 // яка приймає довільну кількість
 // аргументів і повертає їхнє середнє значення.
