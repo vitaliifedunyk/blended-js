@@ -980,15 +980,39 @@
 
 //!========================================================================
 
-// // Завдання 10: Створення об'єкта статистики
-// // Напишіть функцію getSalaryStats(employees), яка:
-// // Приймає масив працівників { name: "John", salary: 1000 }.
-// // Повертає об'єкт з трьома властивостями:
-// // { total: загальна_сума, min: мінімальна, max: максимальна }
-// // Якщо масив порожній, поверніть повідомлення "No data".
+// Завдання 10: Створення об'єкта статистики
+// Напишіть функцію getSalaryStats(employees), яка:
+// Приймає масив працівників { name: "John", salary: 1000 }.
+// Повертає об'єкт з трьома властивостями:
+// { total: загальна_сума, min: мінімальна, max: максимальна }
+// Якщо масив порожній, поверніть повідомлення "No data".
+
+// function getSalaryStats(employees) {
+//     if (employees.length === 0) {
+//         return `No data`
+//     }
+
+//     let minSalary = employees[0].salary
+//     let maxSalary = employees[0].salary
+//     let totalSum = 0;
+//     for (const employee of employees) {
+//         if (employee.salary < minSalary) {
+//             minSalary = employee.salary
+//         }
+//         if (employee.salary > maxSalary) {
+//             maxSalary = employee.salary
+//         }
+//         totalSum += employee.salary
+//     }
+
+//     return { total: totalSum, min: minSalary, max: maxSalary };
+
+// }
 
 // const employees = [
 //     { name: "Manager", salary: 2500 },
 //     { name: "Developer", salary: 4000 },
 //     { name: "Designer", salary: 2100 },
 // ];
+
+// console.log(getSalaryStats(employees));
