@@ -885,16 +885,38 @@
 
 // //!========================================================================
 
-// // Завдання 7: Перевірка наявності навичок
-// // Напишіть функцію checkSkill(developers, skillName), яка:
-// // Приймає масив розробників. У кожного є властивість skills (масив рядків).
-// // Повертає масив імен розробників, які володіють навичкою skillName.
+// Завдання 7: Перевірка наявності навичок
+// Напишіть функцію checkSkill(developers, skillName), яка:
+// Приймає масив розробників. У кожного є властивість skills (масив рядків).
+// Повертає масив імен розробників, які володіють навичкою skillName.
+
+// function checkSkill(developers, skillName) {
+//     if (developers.length === 0) {
+//         return null
+
+//     }
+//     const haveSkill = [];
+
+//     for (const developer of developers) {
+//         const checkSkill = developer.skills
+//         if (checkSkill.includes(skillName)) {
+//             haveSkill.push(developer.name)
+//         }
+//     }
+//     return haveSkill
+// }
 
 // const team = [
 //     { name: "Alex", skills: ["HTML", "CSS", "JS"] },
 //     { name: "Olga", skills: ["JS", "React"] },
 //     { name: "Stas", skills: ["Python", "Django"] },
+//     { name: "Helen", skills: ["JS", "Django"] },
+//     { name: "Andrew", skills: ["Python", "JS"] },
+//     { name: "Mark", skills: ["Python", "Django"] },
 // ];
+
+// console.log(checkSkill(team, "JS"));
+
 
 // //!========================================================================
 
