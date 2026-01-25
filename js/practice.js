@@ -829,41 +829,59 @@
 // Повертає назву (тільки рядок) найдорожчого товару.
 // Якщо масив порожній, поверніть null.
 
-function getMostExpensiveProduct(products) {
-    if (products.length === 0) {
-        return null
-    }
+// function getMostExpensiveProduct(products) {
+//     if (products.length === 0) {
+//         return null
+//     }
 
-    let mostExpensive = products[0];
+//     let mostExpensive = products[0];
 
-    for (const product of products) {
-        if (product.price > mostExpensive.price) {
-            mostExpensive = product
-        }
-    }
-    return mostExpensive
-}
+//     for (const product of products) {
+//         if (product.price > mostExpensive.price) {
+//             mostExpensive = product
+//         }
+//     }
+//     return mostExpensive
+// }
 
-const inventory = [
-    { name: "Bicycle", price: 15000 },
-    { name: "Helmet", price: 1200 },
-    { name: "Gloves", price: 18000 },
-];
-console.log(getMostExpensiveProduct(inventory));
+// const inventory = [
+//     { name: "Bicycle", price: 15000 },
+//     { name: "Helmet", price: 1200 },
+//     { name: "Gloves", price: 18000 },
+// ];
+// console.log(getMostExpensiveProduct(inventory));
 
 
 // //!========================================================================
 
-// // Завдання 6: Список імен певного віку
-// // Напишіть функцію getNamesByAge(people, ageLimit), яка:
-// // Приймає масив об'єктів людей { name: "Ivan", age: 25 }.
-// // Повертає масив імен (тільки рядки) тих людей, чий вік старше за ageLimit.
+// Завдання 6: Список імен певного віку
+// Напишіть функцію getNamesByAge(people, ageLimit), яка:
+// Приймає масив об'єктів людей { name: "Ivan", age: 25 }.
+// Повертає масив імен (тільки рядки) тих людей, чий вік старше за ageLimit.
+
+// function getNamesByAge(people, ageLimit) {
+//     if (people.length === 0) {
+//         return null
+//     }
+//     const newArr = [];
+//     for (const element of people) {
+//         if (element.age > ageLimit) {
+//             newArr.push(element.name)
+//         }
+//     }
+//     return newArr
+// }
 
 // const friends = [
-//     { name: "Victor", age: 18 },
-//     { name: "Elena", age: 24 },
-//     { name: "Denis", age: 30 },
+//     { name: "Victor", age: 21 },
+//     { name: "Gulia", age: 26 },
+//     { name: "Denis", age: 18 },
+//     { name: "Vitalii", age: 28 },
+//     { name: "Ninok", age: 23 },
 // ];
+
+// console.log(getNamesByAge(friends, 21));
+
 
 // //!========================================================================
 
