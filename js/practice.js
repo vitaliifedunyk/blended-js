@@ -823,17 +823,34 @@
 
 // //!========================================================================
 
-// // Завдання 5: Пошук найдорожчого товару
-// // Напишіть функцію getMostExpensiveProduct(products), яка:
-// // Приймає масив об'єктів { name, price }.
-// // Повертає назву (тільки рядок) найдорожчого товару.
-// // Якщо масив порожній, поверніть null.
+// Завдання 5: Пошук найдорожчого товару
+// Напишіть функцію getMostExpensiveProduct(products), яка:
+// Приймає масив об'єктів { name, price }.
+// Повертає назву (тільки рядок) найдорожчого товару.
+// Якщо масив порожній, поверніть null.
 
-// const inventory = [
-//     { name: "Bicycle", price: 15000 },
-//     { name: "Helmet", price: 1200 },
-//     { name: "Gloves", price: 800 },
-// ];
+function getMostExpensiveProduct(products) {
+    if (products.length === 0) {
+        return null
+    }
+
+    let mostExpensive = products[0];
+
+    for (const product of products) {
+        if (product.price > mostExpensive.price) {
+            mostExpensive = product
+        }
+    }
+    return mostExpensive
+}
+
+const inventory = [
+    { name: "Bicycle", price: 15000 },
+    { name: "Helmet", price: 1200 },
+    { name: "Gloves", price: 18000 },
+];
+console.log(getMostExpensiveProduct(inventory));
+
 
 // //!========================================================================
 
