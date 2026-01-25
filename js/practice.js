@@ -920,17 +920,34 @@
 
 // //!========================================================================
 
-// // Завдання 8: Розрахунок середнього балу
-// // Напишіть функцію getAverageGrade(students), яка:
-// // Приймає масив студентів { name: "Ann", grade: 95 }.
-// // Повертає середній бал усіх студентів.
-// // Додайте перевірку: якщо масив порожній, поверніть 0.
+// Завдання 8: Розрахунок середнього балу
+// Напишіть функцію getAverageGrade(students), яка:
+// Приймає масив студентів { name: "Ann", grade: 95 }.
+// Повертає середній бал усіх студентів.
+// Додайте перевірку: якщо масив порожній, поверніть 0.
+
+// function getAverageGrade(students) {
+//     if (students.length === 0) {
+//         return 0
+//     }
+
+//     let mediumGrade = 0;
+
+//     for (const student of students) {
+//         mediumGrade += student.grade
+//     }
+
+//     return mediumGrade / students.length
+// }
 
 // const students = [
 //     { name: "Taras", grade: 80 },
 //     { name: "Svitlana", grade: 92 },
 //     { name: "Andriy", grade: 74 },
 // ];
+
+// console.log(getAverageGrade(students));
+
 
 // //!========================================================================
 
