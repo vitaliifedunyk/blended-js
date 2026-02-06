@@ -275,34 +275,49 @@
 
 // Завдання 19: REDUCE (String)
 // Об'єднайте всі слова в одне речення через пробіл.
-const t19_words = ["I", "love", "JavaScript", "!"];
+// const t19_words = ["I", "love", "JavaScript", "!"];
 
-const res = t19_words.reduce((acc, word) => {
-    if (acc.length === 0) {
-        return word
-    }
-    return acc + " " + word
+// const res = t19_words.reduce((acc, word) => {
+//     if (acc.length === 0) {
+//         return word
+//     }
+//     return acc + " " + word
 
-}, "")
+// }, "")
 
 // const res = t19_words.reduce((acc, word) => {
 //     return acc.length === 0 ? word : acc + " " + word;
 // }, "");
 
-console.log(res);
+// console.log(res);
 
 
 // Очікується: "I love JavaScript !"
 
 // !============================================================================
 
-// // Завдання 20: REDUCE (Object Counting) - ВАЖЛИВО!
-// // Порахуйте, скільки разів зустрічається кожен фрукт.
-// // Поверніть об'єкт { apple: 2, banana: 1, orange: 1 ... }
+// Завдання 20: REDUCE (Object Counting) - ВАЖЛИВО!
+// Порахуйте, скільки разів зустрічається кожен фрукт.
+// Поверніть об'єкт { apple: 2, banana: 1, orange: 1 ... }
 // const t20_fruits = ["apple", "banana", "apple", "orange", "apple", "banana"];
-// // initialValue має бути {}
 
-// // !============================================================================
+// const res = t20_fruits.reduce((acc, fruit) => {
+//     if (!acc[fruit]) {
+//         acc[fruit] = 1
+
+//     } else {
+//         acc[fruit] += 1
+//     }
+
+//     // acc[fruit] = (acc[fruit] || 0) + 1;
+//     return acc
+// }, {})
+// console.log(res);
+
+
+// initialValue має бути {}
+
+// !============================================================================
 
 // // Завдання 21: REDUCE (Total Price)
 // // Порахуйте загальну вартість товарів у кошику.
