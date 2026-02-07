@@ -207,6 +207,45 @@
 // Оголоси приватні властивості #login #email, доступ до яких зроби
 // через геттер та сеттер login email
 
+// class Client {
+//   #login;
+//   #email;
+
+//   constructor(login, email) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+
+//   get login() {
+//     return this.#login;
+//   }
+
+//   set login(newLogin) {
+//     if (newLogin.length < 3) {
+//       console.log("Логін занадто короткий!");
+//       return;
+//     }
+//     this.#login = newLogin;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     if (newEmail.includes('@')) {
+//       this.#email = newEmail;
+//     } else {
+//       console.log("Некоректний формат email");
+//     }
+//   }
+// }
+
+// const myClient = new Client("max123", "max@mail.com");
+
+// console.log(myClient.login); // Викличе геттер -> "max123"
+// console.log(myClient.login = "super_user"); // Викличе сеттер
+
 //!========================================================================
 
 //  Наслідування у класах!
