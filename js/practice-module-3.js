@@ -179,7 +179,7 @@
 // Відсортуйте числа від меншого до більшого.
 // const t11_nums = [100, 5, 22, 1, 9];
 
-// const res = t11_nums.sort((a, b) => a - b)
+// const res = t11_nums.toSorted((a, b) => a - b)
 // console.log(res);
 
 // Очікується: [1, 5, 9, 22, 100]
@@ -190,7 +190,7 @@
 // Відсортуйте числа від більшого до меншого.
 // const t12_nums = [100, 5, 22, 1, 9];
 
-// const res = t12_nums.sort((b, a) => a - b)
+// const res = t12_nums.toSorted((b, a) => a - b)
 // console.log(res);
 
 // Очікується: [100, 22, 9, 5, 1]
@@ -201,7 +201,7 @@
 // Відсортуйте користувачів за віком (зростання).
 // const t13_users = [{ name: "A", age: 30 }, { name: "B", age: 20 }, { name: "C", age: 25 }];
 
-// const res = [...t13_users].sort((a, b) => a.age - b.age);
+// const res = [...t13_users].toSorted((a, b) => a.age - b.age);
 // console.log(res);
 
 
@@ -395,7 +395,7 @@
 // const res = t25_nums
 //     .filter(el => el > 0)
 //     .map(el => el * 2)
-//     .sort((a, b) => a - b)
+//     .toSorted((a, b) => a - b)
 // console.log(res);
 
 
@@ -439,10 +439,10 @@
 
 // !============================================================================
 
-// // Завдання 28: Array from String
-// // Зробіть масив літер з рядка, але тільки голосних (a, e, i, o, u).
-// const t28_str = "hello world";
-// // Очікується: ['e', 'o', 'o']
+// Завдання 28: Array from String
+// Зробіть масив літер з рядка, але тільки голосних (a, e, i, o, u).
+const t28_str = "hello world";
+// Очікується: ['e', 'o', 'o']
 
 // // !============================================================================
 
@@ -613,3 +613,23 @@
 // // ]
 // // Підказка: Спочатку зробіть частотний словник (як в завданні 20),
 // // а потім map або Object.entries.
+
+
+// function greet(name) {
+//     console.log(`Welcome ${name}!`);
+// }
+
+// function notify(name) {
+//     console.log(`Dear ${name}, your room will be ready in 30 minutes`);
+// }
+
+// function registerGuest(name, callback) {
+//     console.log(`Registering ${name}!`);
+//     callback(name);
+// }
+
+// registerGuest("Mango", greet); // "Registering Mango!"
+// // "Welcome Mango!"
+
+// registerGuest("Mango", notify); // "Registering Mango!"
+// // "Dear Mango, your room will be ready in 30 minutes"
