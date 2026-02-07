@@ -103,11 +103,17 @@
 // вік більше 20 років. 
 // Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
 
-//const user = [
-//  { name: 'John', age: 27 },
-//  { name: 'Jane', age: 31 },
-//  { name: 'Bob', age: 19 },
+// const user = [
+//   { name: 'John', age: 27 },
+//   { name: 'Jane', age: 31 },
+//   { name: 'Bob', age: 19 },
 // ]
+
+// const res = user
+//   .filter(us => us.age > 20)
+//   .toSorted((a, b) => a.age - b.age)
+// console.log(res);
+
 
 //!========================================================================
 
