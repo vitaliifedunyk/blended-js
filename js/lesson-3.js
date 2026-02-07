@@ -77,6 +77,10 @@
 
 // const stringArray = ['banana', 'orange', 'apple', 'pear'];
 
+// const res = stringArray.toSorted((a, b) => a.localeCompare(b))
+// console.log(res);
+
+
 //!========================================================================
 
 //  Відсортуйте масив об'єктів за віком у порядку зростання. 
