@@ -65,6 +65,10 @@
 
 // const numbersArray = [4, 2, 5, 1, 3];
 
+// const res = numbersArray.toSorted((a, b) => a - b)
+// console.log(res);
+
+
 //!========================================================================
 
 // Відсортуйте масив рядків ["banana", "orange", "apple", "pear"]
@@ -205,51 +209,51 @@
 // Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з зарплатою співробітника та відділом, в якому він працює.
 
 
-class Person {
-  constructor(params) {
-    this.name = params.name;
-    this.age = params.age;
-    this.gender = params.gender;
-    this.email = params.email;
-  }
+// class Person {
+//   constructor(params) {
+//     this.name = params.name;
+//     this.age = params.age;
+//     this.gender = params.gender;
+//     this.email = params.email;
+//   }
 
-  getDetails() {
-    return {
-      name: this.name,
-      age: this.age,
-      gender: this.gender,
-      email: this.email,
-    };
-  }
-}
+//   getDetails() {
+//     return {
+//       name: this.name,
+//       age: this.age,
+//       gender: this.gender,
+//       email: this.email,
+//     };
+//   }
+// }
 
-class Employee extends Person {
-  constructor(params) {
-    super(params);
-    this.salary = params.salary
-    this.department = params.department
-  }
+// class Employee extends Person {
+//   constructor(params) {
+//     super(params);
+//     this.salary = params.salary
+//     this.department = params.department
+//   }
 
-  getEmployeeDetails() {
-    return {
-      salary: this.salary,
-      department: this.department
-    }
-  }
-}
+//   getEmployeeDetails() {
+//     return {
+//       salary: this.salary,
+//       department: this.department
+//     }
+//   }
+// }
 
-const poly = new Employee({
-  name: 'Polly',
-  age: 25,
-  gender: 'male',
-  email: 'poly@gmail.com',
-  salary: 1500,
-  department: 'finance',
+// const poly = new Employee({
+//   name: 'Polly',
+//   age: 25,
+//   gender: 'male',
+//   email: 'poly@gmail.com',
+//   salary: 1500,
+//   department: 'finance',
 
-});
+// });
 
-console.log(poly);
-console.log(poly.getDetails());
-console.log(poly.getEmployeeDetails());
+// console.log(poly);
+// console.log(poly.getDetails());
+// console.log(poly.getEmployeeDetails());
 
 //!========================================================================
