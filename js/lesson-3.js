@@ -21,6 +21,9 @@
 //  { id: 3, values: [7, 8, 9] },
 // ];
 
+// const result = data.reduce((acc, el)=>{return [...acc, ...el.values]}, [])
+// console.log(result);
+
 
 //!========================================================================
 
