@@ -187,21 +187,69 @@
 
 //!========================================================================
 
-  //  Наслідування у класах!
-  // Cтворіть клас `Person`, який містить наступні властивості:
-  //  - `name` - ім'я людини;
-  //  - `age`- вік людини;
-  //  - `gender` - стать людини;
-  //  - `email`- електронна пошта людини.
-  
-  // Крім того, клас `Person` має мати метод `getDetails()`,
-  // який повертає об'єкт з ім'ям, віком, статтю 
-  //та електронною поштою людини.
-  
-  // 
-  // Потім Створіть клас `Employee`, який розширює клас `Person` і містить наступні властивості:
-  //  - salary - зарплата співробітника;
-  //  - department - відділ, в якому працює співробітник.
-  // Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з зарплатою співробітника та відділом, в якому він працює.
+//  Наслідування у класах!
+// Cтворіть клас `Person`, який містить наступні властивості:
+//  - `name` - ім'я людини;
+//  - `age`- вік людини;
+//  - `gender` - стать людини;
+//  - `email`- електронна пошта людини.
+
+// Крім того, клас `Person` має мати метод `getDetails()`,
+// який повертає об'єкт з ім'ям, віком, статтю
+//та електронною поштою людини.
+
+//
+// Потім Створіть клас `Employee`, який розширює клас `Person` і містить наступні властивості:
+//  - salary - зарплата співробітника;
+//  - department - відділ, в якому працює співробітник.
+// Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з зарплатою співробітника та відділом, в якому він працює.
+
+
+class Person {
+  constructor(params) {
+    this.name = params.name;
+    this.age = params.age;
+    this.gender = params.gender;
+    this.email = params.email;
+  }
+
+  getDetails() {
+    return {
+      name: this.name,
+      age: this.age,
+      gender: this.gender,
+      email: this.email,
+    };
+  }
+}
+
+class Employee extends Person {
+  constructor(params) {
+    super(params);
+    this.salary = params.salary
+    this.department = params.department
+  }
+
+  getEmployeeDetails() {
+    return {
+      salary: this.salary,
+      department: this.department
+    }
+  }
+}
+
+const poly = new Employee({
+  name: 'Polly',
+  age: 25,
+  gender: 'male',
+  email: 'poly@gmail.com',
+  salary: 1500,
+  department: 'finance',
+
+});
+
+console.log(poly);
+console.log(poly.getDetails());
+console.log(poly.getEmployeeDetails());
 
 //!========================================================================
