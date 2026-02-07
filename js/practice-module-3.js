@@ -442,6 +442,11 @@
 // Завдання 28: Array from String
 // Зробіть масив літер з рядка, але тільки голосних (a, e, i, o, u).
 const t28_str = "hello world";
+let vowel = "aeiou"
+
+const res = [...t28_str].filter(leter => vowel.includes(leter))
+console.log(res);
+
 // Очікується: ['e', 'o', 'o']
 
 // // !============================================================================
