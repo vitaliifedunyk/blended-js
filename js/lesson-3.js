@@ -53,10 +53,10 @@
 
 // Знайдіть перше непарне число
 
-const numbers = [2, 6, 8, 9, 10, 12];
+// const numbers = [2, 6, 8, 9, 10, 12];
 
-const res = numbers.find(el => el%2===1)
-console.log(res);
+// const res = numbers.find(el => el % 2 === 1)
+// console.log(res);
 
 //!========================================================================
 
